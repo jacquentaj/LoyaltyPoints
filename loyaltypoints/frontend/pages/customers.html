@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Customers - LoyaltyPoints</title>
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <div class="logo">
+        Loyalty<span>Points</span>
+    </div>
+
+    <nav>
+
+        <a href="../index.html">
+            Dashboard
+        </a>
+
+        <a href="customers.html" class="active">
+            Customers
+        </a>
+
+        <a href="tiers.html">
+            Tiers
+        </a>
+
+        <a href="purchases.html">
+            Purchases
+        </a>
+
+        <a href="ledger.html">
+            Points Ledger
+        </a>
+
+    </nav>
+
+</div>
+
+
+<div class="main-content">
+
+    <header class="topbar">
+
+        <div>
+
+            <h1>Customers</h1>
+
+            <p>
+                Manage registered loyalty customers
+            </p>
+
+        </div>
+
+        <div class="status">
+
+            <span class="status-dot"></span>
+
+            System Online
+
+        </div>
+
+    </header>
+
+
+    <section class="welcome">
+
+        <h2>Customer Management</h2>
+
+        <p>
+            View customer profiles, loyalty points,
+            lifetime points and membership tiers.
+        </p>
+
+    </section>
+
+
+    <section class="card">
+
+        <h2>Customer List</h2>
+        <section class="card">
+
+            <h2>Add Customer</h2>
+
+            <form id="customerForm">
+
+                <div class="form-group">
+
+                    <label for="customerId">
+                        Customer ID
+                    </label>
+
+                    <input
+                            type="number"
+                            id="customerId"
+                            placeholder="Enter customer ID"
+                            required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="customerName">
+                        Name
+                    </label>
+
+                    <input
+                            type="text"
+                            id="customerName"
+                            placeholder="Enter customer name"
+                            required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="customerEmail">
+                        Email
+                    </label>
+
+                    <input
+                            type="email"
+                            id="customerEmail"
+                            placeholder="Enter email"
+                            required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="customerTier">
+                        Tier
+                    </label>
+
+                    <input
+                            type="number"
+                            id="customerTier"
+                            value="1"
+                            min="1"
+                            required
+                    >
+
+                </div>
+
+
+                <button type="submit" class="primary-button">
+                    Add Customer
+                </button>
+
+            </form>
+
+        </section>
+
+        <table>
+
+            <thead>
+
+            <tr>
+
+                <th>ID</th>
+
+                <th>Name</th>
+
+                <th>Email</th>
+
+                <th>Available Points</th>
+
+                <th>Lifetime Points</th>
+
+                <th>Tier ID</th>
+
+            </tr>
+
+            </thead>
+
+            <tbody id="customerTableBody">
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+</div>
+
+
+<script src="../js/customers.js"></script>
+<script src="../js/customers-form.js"></script>
+
+</body>
+
+</html>

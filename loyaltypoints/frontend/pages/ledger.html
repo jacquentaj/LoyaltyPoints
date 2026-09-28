@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Points Ledger - LoyaltyPoints</title>
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <div class="logo">
+        Loyalty<span>Points</span>
+    </div>
+
+    <nav>
+
+        <a href="../index.html">
+            Dashboard
+        </a>
+
+        <a href="customers.html">
+            Customers
+        </a>
+
+        <a href="tiers.html">
+            Tiers
+        </a>
+
+        <a href="purchases.html">
+            Purchases
+        </a>
+
+        <a href="ledger.html" class="active">
+            Points Ledger
+        </a>
+
+    </nav>
+
+</div>
+
+
+<div class="main-content">
+
+    <header class="topbar">
+
+        <div>
+
+            <h1>Points Ledger</h1>
+
+            <p>
+                Track earned and redeemed loyalty points
+            </p>
+
+        </div>
+
+        <div class="status">
+
+            <span class="status-dot"></span>
+
+            System Online
+
+        </div>
+
+    </header>
+
+
+    <section class="welcome">
+
+        <h2>Points Transactions</h2>
+
+        <p>
+            View all loyalty point earning and
+            redemption transactions.
+        </p>
+
+    </section>
+
+    <section class="card">
+        <h2>Add Points Transaction</h2>
+
+        <form id="ledgerForm">
+
+            <div class="form-group">
+                <label for="ledgerId">Transaction ID</label>
+                <input
+                        type="number"
+                        id="ledgerId"
+                        placeholder="Enter transaction ID"
+                        required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="ledgerCustomerId">Customer ID</label>
+                <input
+                        type="number"
+                        id="ledgerCustomerId"
+                        placeholder="Enter customer ID"
+                        required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="transactionType">Transaction Type</label>
+                <select id="transactionType" required>
+                    <option value="">Select type</option>
+                    <option value="EARN">EARN</option>
+                    <option value="REDEEM">REDEEM</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="ledgerPoints">Points</label>
+                <input
+                        type="number"
+                        id="ledgerPoints"
+                        placeholder="Enter points"
+                        min="1"
+                        required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="transactionDate">Transaction Date</label>
+                <input
+                        type="date"
+                        id="transactionDate"
+                        required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="ledgerDescription">Description</label>
+                <input
+                        type="text"
+                        id="ledgerDescription"
+                        placeholder="Enter description"
+                >
+            </div>
+
+            <button type="submit" class="primary-button">
+                Add Transaction
+            </button>
+
+        </form>
+    </section>
+    <section class="card">
+
+        <h2>Transaction History</h2>
+
+        <table>
+
+            <thead>
+
+            <tr>
+
+                <th>ID</th>
+
+                <th>Customer ID</th>
+
+                <th>Transaction Type</th>
+
+                <th>Points</th>
+
+                <th>Date</th>
+
+                <th>Description</th>
+
+            </tr>
+
+            </thead>
+
+            <tbody id="ledgerTableBody">
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+</div>
+
+
+<script src="../js/ledger.js"></script>
+
+</body>
+
+</html>

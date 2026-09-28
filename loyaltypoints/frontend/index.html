@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LoyaltyPoints Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <div class="logo">
+        Loyalty<span>Points</span>
+    </div>
+
+    <nav>
+        <a href="index.html" class="active">Dashboard</a>
+        <a href="pages/customers.html">Customers</a>
+        <a href="pages/tiers.html">Tiers</a>
+        <a href="pages/purchases.html">Purchases</a>
+        <a href="pages/ledger.html">Points Ledger</a>
+        <a href="pages/login.html">Login</a>
+        <a href="pages/register.html">Register</a>
+        <a href="pages/login.html" onclick="logout()">Logout</a>
+    </nav>
+
+</div>
+
+
+<div class="main-content">
+
+    <header class="topbar">
+
+        <div>
+            <h1>Dashboard</h1>
+            <p>Tier-Based Retail Loyalty Points Engine</p>
+        </div>
+
+        <div class="status">
+            <span class="status-dot"></span>
+            System Online
+        </div>
+
+    </header>
+
+
+    <section class="cards">
+
+        <div class="card">
+            <h3>Total Customers</h3>
+            <div class="card-value" id="customerCount">0</div>
+            <p>Registered customers</p>
+        </div>
+
+        <div class="card">
+            <h3>Total Tiers</h3>
+            <div class="card-value" id="tierCount">0</div>
+            <p>Available membership tiers</p>
+        </div>
+
+        <div class="card">
+            <h3>Total Purchases</h3>
+            <div class="card-value" id="purchaseCount">0</div>
+            <p>Recorded purchases</p>
+        </div>
+
+        <div class="card">
+            <h3>Point Transactions</h3>
+            <div class="card-value" id="ledgerCount">0</div>
+            <p>Earn and redeem transactions</p>
+        </div>
+
+    </section>
+
+
+    <section class="welcome">
+
+        <h2>Welcome to LoyaltyPoints</h2>
+
+        <p>
+            Manage customers, purchases, loyalty tiers,
+            and point transactions from one centralized system.
+        </p>
+
+    </section>
+
+
+    <section class="quick-actions">
+
+        <h2>Quick Actions</h2>
+
+        <div class="action-grid">
+
+            <a href="pages/customers.html" class="action-card">
+                <h3>Manage Customers</h3>
+                <p>Create and manage customer accounts.</p>
+            </a>
+
+            <a href="pages/tiers.html" class="action-card">
+                <h3>Manage Tiers</h3>
+                <p>Configure loyalty tiers and discounts.</p>
+            </a>
+
+            <a href="pages/purchases.html" class="action-card">
+                <h3>Record Purchase</h3>
+                <p>Add customer purchase information.</p>
+            </a>
+
+            <a href="pages/ledger.html" class="action-card">
+                <h3>Points Ledger</h3>
+                <p>Track earned and redeemed points.</p>
+            </a>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>
